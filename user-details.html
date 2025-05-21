@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Details - ConcertHub">
+    <title>User Details - ConcertHub</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__text">ConcertHub</h1>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="events.html" class="nav__link">Events</a></li>
+                        <li class="nav__item"><a href="my-tickets.html" class="nav__link">My Tickets</a></li>
+                        <li class="nav__item"><a href="users.html" class="nav__link nav__link--active">Users</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link nav__link--btn">Logout</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <div class="container">
+                <div class="admin-header">
+                    <h2 class="admin-title">User Details</h2>
+                    <div class="admin-actions">
+                        <a href="users.html" class="btn btn--secondary">Back to Users</a>
+                        <a href="edit-user.html" class="btn btn--primary">Edit User</a>
+                    </div>
+                </div>
+
+                <div class="admin-content">
+                    <div class="user-details">
+                        <div class="user-details__header">
+                            <div class="user-avatar">
+                                <img src="https://via.placeholder.com/150" alt="User Avatar">
+                            </div>
+                            <div class="user-info">
+                                <h3 class="user-info__name">John Doe</h3>
+                                <p class="user-info__role"><span class="badge badge--regular">Regular User</span></p>
+                                <p class="user-info__status"><span class="badge badge--active">Active</span></p>
+                            </div>
+                        </div>
+
+                        <div class="user-details__content">
+                            <div class="detail-group">
+                                <h4 class="detail-group__title">Account Information</h4>
+                                <div class="detail-item">
+                                    <span class="detail-item__label">Username:</span>
+                                    <span class="detail-item__value">john_doe</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-item__label">Email:</span>
+                                    <span class="detail-item__value">john@example.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-item__label">Account Created:</span>
+                                    <span class="detail-item__value">January 15, 2023</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-item__label">Last Login:</span>
+                                    <span class="detail-item__value">May 10, 2023</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-group">
+                                <h4 class="detail-group__title">Activity</h4>
+                                <div class="detail-item">
+                                    <span class="detail-item__label">Tickets Purchased:</span>
+                                    <span class="detail-item__value">12</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-item__label">Tickets Reserved:</span>
+                                    <span class="detail-item__value">3</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-item__label">Events Attended:</span>
+                                    <span class="detail-item__value">8</span>
+                                </div>
+                            </div>
+
+                            <div class="detail-group">
+                                <h4 class="detail-group__title">Recent Activity</h4>
+                                <div class="activity-list">
+                                    <div class="activity-item">
+                                        <div class="activity-item__icon">
+                                            <span class="icon icon-ticket"></span>
+                                        </div>
+                                        <div class="activity-item__content">
+                                            <p class="activity-item__title">Purchased ticket for Rock Festival 2023</p>
+                                            <p class="activity-item__date">May 5, 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-item__icon">
+                                            <span class="icon icon-bookmark"></span>
+                                        </div>
+                                        <div class="activity-item__content">
+                                            <p class="activity-item__title">Reserved ticket for Jazz Night</p>
+                                            <p class="activity-item__date">April 28, 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-item__icon">
+                                            <span class="icon icon-user"></span>
+                                        </div>
+                                        <div class="activity-item__content">
+                                            <p class="activity-item__title">Updated profile information</p>
+                                            <p class="activity-item__date">April 15, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3 class="footer__title">ConcertHub</h3>
+                    <p class="footer__description">Your one-stop platform for booking concert and event tickets.</p>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="my-tickets.html">My Tickets</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Support</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Subscribe</h4>
+                    <p>Stay updated with the latest events</p>
+                    <form class="footer__form">
+                        <input type="email" placeholder="Your email" class="footer__input" required>
+                        <button type="submit" class="btn btn--small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2023 ConcertHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

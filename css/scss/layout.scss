@@ -1,0 +1,174 @@
+/* Layout styles */
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+  
+  @include clearfix;
+}
+
+.row {
+  @include flex;
+  flex-wrap: wrap;
+  margin-right: -$spacing-md;
+  margin-left: -$spacing-md;
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: $spacing-md;
+  padding-left: $spacing-md;
+}
+
+// Grid system
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 percentage($i / 12);
+    max-width: percentage($i / 12);
+  }
+}
+
+@include respond-above(sm) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+    }
+  }
+}
+
+@include respond-above(md) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+    }
+  }
+}
+
+@include respond-above(lg) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+    }
+  }
+}
+
+// Sections
+.section {
+  padding: $spacing-xxl 0;
+  
+  @include respond-below(md) {
+    padding: $spacing-xl 0;
+  }
+}
+
+.section-title {
+  @include heading-2;
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  
+  @include respond-below(md) {
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.page-header {
+  background-color: $primary-color;
+  background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $white;
+  padding: $spacing-xl 0;
+  text-align: center;
+  
+  .page-title {
+    color: $white;
+    margin-bottom: $spacing-sm;
+  }
+  
+  .page-description {
+    color: rgba($white, 0.9);
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Text utilities
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Spacing utilities
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.ml-0 { margin-left: 0 !important; }
+.mr-0 { margin-right: 0 !important; }
+
+.mt-1 { margin-top: $spacing-sm !important; }
+.mb-1 { margin-bottom: $spacing-sm !important; }
+.ml-1 { margin-left: $spacing-sm !important; }
+.mr-1 { margin-right: $spacing-sm !important; }
+
+.mt-2 { margin-top: $spacing-md !important; }
+.mb-2 { margin-bottom: $spacing-md !important; }
+.ml-2 { margin-left: $spacing-md !important; }
+.mr-2 { margin-right: $spacing-md !important; }
+
+.mt-3 { margin-top: $spacing-lg !important; }
+.mb-3 { margin-bottom: $spacing-lg !important; }
+.ml-3 { margin-left: $spacing-lg !important; }
+.mr-3 { margin-right: $spacing-lg !important; }
+
+.mt-4 { margin-top: $spacing-xl !important; }
+.mb-4 { margin-bottom: $spacing-xl !important; }
+.ml-4 { margin-left: $spacing-xl !important; }
+.mr-4 { margin-right: $spacing-xl !important; }
+
+.mt-5 { margin-top: $spacing-xxl !important; }
+.mb-5 { margin-bottom: $spacing-xxl !important; }
+.ml-5 { margin-left: $spacing-xxl !important; }
+.mr-5 { margin-right: $spacing-xxl !important; }
+
+.pt-0 { padding-top: 0 !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.pl-0 { padding-left: 0 !important; }
+.pr-0 { padding-right: 0 !important; }
+
+.pt-1 { padding-top: $spacing-sm !important; }
+.pb-1 { padding-bottom: $spacing-sm !important; }
+.pl-1 { padding-left: $spacing-sm !important; }
+.pr-1 { padding-right: $spacing-sm !important; }
+
+.pt-2 { padding-top: $spacing-md !important; }
+.pb-2 { padding-bottom: $spacing-md !important; }
+.pl-2 { padding-left: $spacing-md !important; }
+.pr-2 { padding-right: $spacing-md !important; }
+
+.pt-3 { padding-top: $spacing-lg !important; }
+.pb-3 { padding-bottom: $spacing-lg !important; }
+.pl-3 { padding-left: $spacing-lg !important; }
+.pr-3 { padding-right: $spacing-lg !important; }
+
+.pt-4 { padding-top: $spacing-xl !important; }
+.pb-4 { padding-bottom: $spacing-xl !important; }
+.pl-4 { padding-left: $spacing-xl !important; }
+.pr-4 { padding-right: $spacing-xl !important; }
+
+.pt-5 { padding-top: $spacing-xxl !important; }
+.pb-5 { padding-bottom: $spacing-xxl !important; }
+.pl-5 { padding-left: $spacing-xxl !important; }
+.pr-5 { padding-right: $spacing-xxl !important; }

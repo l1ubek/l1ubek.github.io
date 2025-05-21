@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Tickets - ConcertHub">
+    <title>My Tickets - ConcertHub</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__text">ConcertHub</h1>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="events.html" class="nav__link">Events</a></li>
+                        <li class="nav__item"><a href="my-tickets.html" class="nav__link nav__link--active">My Tickets</a></li>
+                        <li class="nav__item"><a href="users.html" class="nav__link">Users</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link nav__link--btn">Logout</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2 class="page-title">My Tickets</h2>
+                <p class="page-description">Manage your purchased and reserved tickets</p>
+            </div>
+        </section>
+
+        <section class="tickets-section">
+            <div class="container">
+                <div class="tickets-tabs">
+                    <button class="tickets-tab tickets-tab--active" data-tab="upcoming">Upcoming</button>
+                    <button class="tickets-tab" data-tab="past">Past</button>
+                    <button class="tickets-tab" data-tab="reserved">Reserved</button>
+                </div>
+
+                <div class="tickets-content">
+                    <!-- Upcoming Tickets Tab -->
+                    <div class="tickets-panel tickets-panel--active" id="upcoming-tickets">
+                        <div class="tickets-list">
+                            <!-- Ticket Item 1 -->
+                            <div class="ticket-item">
+                                <div class="ticket-item__image">
+                                    <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Rock Festival 2023">
+                                </div>
+                                <div class="ticket-item__content">
+                                    <h3 class="ticket-item__title">Rock Festival 2023</h3>
+                                    <div class="ticket-item__details">
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-calendar"></span>
+                                            <span>June 15, 2023 | 18:00</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-location"></span>
+                                            <span>Central Park, New York</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-ticket"></span>
+                                            <span>2x Standard Ticket</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-item__actions">
+                                    <button class="btn btn--primary">View Ticket</button>
+                                    <button class="btn btn--secondary">Download</button>
+                                </div>
+                            </div>
+
+                            <!-- Ticket Item 2 -->
+                            <div class="ticket-item">
+                                <div class="ticket-item__image">
+                                    <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Jazz Night">
+                                </div>
+                                <div class="ticket-item__content">
+                                    <h3 class="ticket-item__title">Jazz Night</h3>
+                                    <div class="ticket-item__details">
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-calendar"></span>
+                                            <span>July 10, 2023 | 20:00</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-location"></span>
+                                            <span>Blue Note Club, New York</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-ticket"></span>
+                                            <span>1x VIP Ticket</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-item__actions">
+                                    <button class="btn btn--primary">View Ticket</button>
+                                    <button class="btn btn--secondary">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Past Tickets Tab -->
+                    <div class="tickets-panel" id="past-tickets">
+                        <div class="tickets-list">
+                            <!-- Past Ticket Item 1 -->
+                            <div class="ticket-item ticket-item--past">
+                                <div class="ticket-item__image">
+                                    <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Pop Concert">
+                                </div>
+                                <div class="ticket-item__content">
+                                    <h3 class="ticket-item__title">Pop Concert</h3>
+                                    <div class="ticket-item__details">
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-calendar"></span>
+                                            <span>May 5, 2023 | 19:00</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-location"></span>
+                                            <span>Stadium Arena, New York</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-ticket"></span>
+                                            <span>2x Standard Ticket</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-item__actions">
+                                    <button class="btn btn--secondary">View Details</button>
+                                </div>
+                            </div>
+
+                            <!-- Past Ticket Item 2 -->
+                            <div class="ticket-item ticket-item--past">
+                                <div class="ticket-item__image">
+                                    <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Classical Symphony">
+                                </div>
+                                <div class="ticket-item__content">
+                                    <h3 class="ticket-item__title">Classical Symphony</h3>
+                                    <div class="ticket-item__details">
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-calendar"></span>
+                                            <span>April 20, 2023 | 18:30</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-location"></span>
+                                            <span>Opera House, New York</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-ticket"></span>
+                                            <span>1x Premium Ticket</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-item__actions">
+                                    <button class="btn btn--secondary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reserved Tickets Tab -->
+                    <div class="tickets-panel" id="reserved-tickets">
+                        <div class="tickets-list">
+                            <!-- Reserved Ticket Item 1 -->
+                            <div class="ticket-item ticket-item--reserved">
+                                <div class="ticket-item__image">
+                                    <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Theater Play">
+                                </div>
+                                <div class="ticket-item__content">
+                                    <h3 class="ticket-item__title">Hamlet: Modern Adaptation</h3>
+                                    <div class="ticket-item__details">
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-calendar"></span>
+                                            <span>August 15, 2023 | 19:30</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-location"></span>
+                                            <span>City Theater, New York</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-ticket"></span>
+                                            <span>2x Standard Ticket</span>
+                                        </div>
+                                        <div class="ticket-detail">
+                                            <span class="icon icon-clock"></span>
+                                            <span>Reserved until: July 15, 2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-item__actions">
+                                    <button class="btn btn--primary">Complete Purchase</button>
+                                    <button class="btn btn--danger">Cancel Reservation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticket View Modal -->
+        <div class="modal" id="ticket-view-modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content modal__content--large">
+                <div class="modal__header">
+                    <h3 class="modal__title">Ticket Details</h3>
+                    <button class="modal__close" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal__body">
+                    <div class="ticket-view">
+                        <div class="ticket-view__header">
+                            <h3 class="ticket-view__event">Rock Festival 2023</h3>
+                            <div class="ticket-view__details">
+                                <p><strong>Date:</strong> June 15, 2023 | 18:00</p>
+                                <p><strong>Location:</strong> Central Park, New York</p>
+                            </div>
+                        </div>
+                        <div class="ticket-view__qr">
+                            <img src="https://via.placeholder.com/200" alt="QR Code">
+                            <p>Scan this QR code at the entrance</p>
+                        </div>
+                        <div class="ticket-view__info">
+                            <div class="ticket-view__info-item">
+                                <span class="ticket-view__label">Ticket Type:</span>
+                                <span class="ticket-view__value">Standard Ticket</span>
+                            </div>
+                            <div class="ticket-view__info-item">
+                                <span class="ticket-view__label">Quantity:</span>
+                                <span class="ticket-view__value">2</span>
+                            </div>
+                            <div class="ticket-view__info-item">
+                                <span class="ticket-view__label">Order ID:</span>
+                                <span class="ticket-view__value">ORD-12345678</span>
+                            </div>
+                            <div class="ticket-view__info-item">
+                                <span class="ticket-view__label">Purchase Date:</span>
+                                <span class="ticket-view__value">May 20, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button class="btn btn--secondary">Download PDF</button>
+                    <button class="btn btn--primary">Send to Email</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3 class="footer__title">ConcertHub</h3>
+                    <p class="footer__description">Your one-stop platform for booking concert and event tickets.</p>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="my-tickets.html">My Tickets</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Support</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Subscribe</h4>
+                    <p>Stay updated with the latest events</p>
+                    <form class="footer__form">
+                        <input type="email" placeholder="Your email" class="footer__input" required>
+                        <button type="submit" class="btn btn--small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2023 ConcertHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

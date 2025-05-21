@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Concert Ticket Booking Service">
+    <title>ConcertHub - Book Your Tickets</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__text">ConcertHub</h1>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+                        <li class="nav__item"><a href="events.html" class="nav__link">Events</a></li>
+                        <li class="nav__item"><a href="my-tickets.html" class="nav__link">My Tickets</a></li>
+                        <li class="nav__item"><a href="users.html" class="nav__link">Users</a></li>
+                        <li class="nav__item"><a href="login.html" class="nav__link nav__link--btn">Login</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h2 class="hero__title">Find and Book Your Favorite Events</h2>
+                    <p class="hero__subtitle">Concerts, festivals, theater performances and more</p>
+                    <a href="events.html" class="btn btn--primary">Browse Events</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-events">
+            <div class="container">
+                <h2 class="section-title">Featured Events</h2>
+                <div class="events-grid">
+                    <!-- Event Card 1 -->
+                    <article class="event-card">
+                        <div class="event-card__image">
+                            <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Rock Festival 2023">
+                            <span class="event-card__category">Music</span>
+                        </div>
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Rock Festival 2023</h3>
+                            <div class="event-card__details">
+                                <p class="event-card__date">June 15, 2023</p>
+                                <p class="event-card__location">Central Park</p>
+                            </div>
+                            <div class="event-card__footer">
+                                <span class="event-card__price">From $50</span>
+                                <a href="event-details.html" class="btn btn--small">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 2 -->
+                    <article class="event-card">
+                        <div class="event-card__image">
+                            <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Jazz Night">
+                            <span class="event-card__category">Jazz</span>
+                        </div>
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Jazz Night</h3>
+                            <div class="event-card__details">
+                                <p class="event-card__date">July 10, 2023</p>
+                                <p class="event-card__location">Blue Note Club</p>
+                            </div>
+                            <div class="event-card__footer">
+                                <span class="event-card__price">From $35</span>
+                                <a href="event-details.html" class="btn btn--small">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 3 -->
+                    <article class="event-card">
+                        <div class="event-card__image">
+                            <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Classical Symphony">
+                            <span class="event-card__category">Classical</span>
+                        </div>
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Classical Symphony</h3>
+                            <div class="event-card__details">
+                                <p class="event-card__date">August 5, 2023</p>
+                                <p class="event-card__location">Opera House</p>
+                            </div>
+                            <div class="event-card__footer">
+                                <span class="event-card__price">From $75</span>
+                                <a href="event-details.html" class="btn btn--small">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 4 -->
+                    <article class="event-card">
+                        <div class="event-card__image">
+                            <img src="https://storage.googleapis.com/research-production/1/2024/06/RS064-Socially-Motivated-Music-Recommendation_1_Without-Logo.png" alt="Pop Concert">
+                            <span class="event-card__category">Pop</span>
+                        </div>
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Pop Concert</h3>
+                            <div class="event-card__details">
+                                <p class="event-card__date">September 20, 2023</p>
+                                <p class="event-card__location">Stadium Arena</p>
+                            </div>
+                            <div class="event-card__footer">
+                                <span class="event-card__price">From $60</span>
+                                <a href="event-details.html" class="btn btn--small">Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center">
+                    <a href="events.html" class="btn btn--secondary">View All Events</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Browse Events">
+                        </div>
+                        <h3 class="step__title">Browse Events</h3>
+                        <p class="step__description">Find your favorite concerts, festivals, and performances</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/709/709496.png" alt="Select Tickets">
+                        </div>
+                        <h3 class="step__title">Select Tickets</h3>
+                        <p class="step__description">Choose your seats and ticket types</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Secure Payment">
+                        </div>
+                        <h3 class="step__title">Secure Payment</h3>
+                        <p class="step__description">Pay securely with multiple payment options</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png" alt="Enjoy Event">
+                        </div>
+                        <h3 class="step__title">Enjoy Event</h3>
+                        <p class="step__description">Get your e-tickets and enjoy the show</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3 class="footer__title">ConcertHub</h3>
+                    <p class="footer__description">Your one-stop platform for booking concert and event tickets.</p>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="my-tickets.html">My Tickets</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Support</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Subscribe</h4>
+                    <p>Stay updated with the latest events</p>
+                    <form class="footer__form">
+                        <input type="email" placeholder="Your email" class="footer__input" required>
+                        <button type="submit" class="btn btn--small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2023 ConcertHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

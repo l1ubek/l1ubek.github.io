@@ -1,0 +1,203 @@
+/* Home page styles */
+.hero {
+  background-color: $primary-color;
+  background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $white;
+  padding: $spacing-xxxl 0;
+  text-align: center;
+  
+  @include respond-below(md) {
+    padding: $spacing-xxl 0;
+  }
+  
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  &__title {
+    color: $white;
+    font-size: $font-size-xxxl;
+    margin-bottom: $spacing-md;
+    
+    @include respond-below(md) {
+      font-size: $font-size-xxl;
+    }
+  }
+  
+  &__subtitle {
+    color: rgba($white, 0.9);
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-lg;
+    
+    @include respond-below(md) {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+.featured-events {
+  padding: $spacing-xxl 0;
+  
+  @include respond-below(md) {
+    padding: $spacing-xl 0;
+  }
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+  
+  @include respond-below(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @include respond-below(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-below(sm) {
+    grid-template-columns: 1fr;
+  }
+  
+  &--small {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @include respond-below(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-below(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.event-card {
+  @include card;
+  transition: $transition-base;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-lg;
+  }
+  
+  &__image {
+    position: relative;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+  
+  &__category {
+    position: absolute;
+    top: $spacing-sm;
+    left: $spacing-sm;
+    background-color: rgba($primary-color, 0.9);
+    color: $white;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+  }
+  
+  &__content {
+    padding: $spacing-md;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__title {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-sm;
+    
+    @include text-truncate;
+  }
+  
+  &__details {
+    margin-bottom: $spacing-md;
+    flex: 1;
+  }
+  
+  &__date,
+  &__location {
+    font-size: $font-size-sm;
+    color: $gray;
+    margin-bottom: $spacing-xs;
+  }
+  
+  &__footer {
+    @include flex-between;
+    margin-top: auto;
+  }
+  
+  &__price {
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+  }
+}
+
+.how-it-works {
+  background-color: $gray-lighter;
+  padding: $spacing-xxl 0;
+  
+  @include respond-below(md) {
+    padding: $spacing-xl 0;
+  }
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-lg;
+  
+  @include respond-below(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-below(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  text-align: center;
+  
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto $spacing-md;
+    background-color: $white;
+    border-radius: $border-radius-circle;
+    @include flex-center;
+    box-shadow: $box-shadow;
+    
+    img {
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+  
+  &__title {
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__description {
+    color: $gray;
+  }
+}

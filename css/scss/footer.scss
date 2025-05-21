@@ -1,0 +1,82 @@
+/* Footer styles */
+.footer {
+  background-color: $dark-color;
+  color: $white;
+  padding: $spacing-xl 0 $spacing-lg;
+  
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    
+    @include respond-below(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-below(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__title {
+    color: $white;
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__description {
+    color: rgba($white, 0.8);
+    margin-bottom: $spacing-md;
+  }
+  
+  &__subtitle {
+    color: $white;
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: $spacing-sm;
+    }
+    
+    a {
+      color: rgba($white, 0.8);
+      text-decoration: none;
+      transition: $transition-base;
+      
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  &__form {
+    @include flex;
+    margin-top: $spacing-md;
+  }
+  
+  &__input {
+    flex: 1;
+    padding: $spacing-sm;
+    border: none;
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+  
+  &__bottom {
+    border-top: 1px solid rgba($white, 0.1);
+    padding-top: $spacing-lg;
+    text-align: center;
+  }
+  
+  &__copyright {
+    color: rgba($white, 0.6);
+    margin: 0;
+  }
+}

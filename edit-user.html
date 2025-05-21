@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edit User - ConcertHub">
+    <title>Edit User - ConcertHub</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__text">ConcertHub</h1>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="events.html" class="nav__link">Events</a></li>
+                        <li class="nav__item"><a href="my-tickets.html" class="nav__link">My Tickets</a></li>
+                        <li class="nav__item"><a href="users.html" class="nav__link nav__link--active">Users</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link nav__link--btn">Logout</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <div class="container">
+                <div class="admin-header">
+                    <h2 class="admin-title">Edit User</h2>
+                    <div class="admin-actions">
+                        <a href="user-details.html" class="btn btn--secondary">Cancel</a>
+                    </div>
+                </div>
+
+                <div class="admin-content">
+                    <div class="notification notification--error">
+                        <div class="notification__icon">
+                            <span class="icon icon-alert"></span>
+                        </div>
+                        <div class="notification__content">
+                            <p class="notification__message">Please fix the validation errors below.</p>
+                        </div>
+                        <button class="notification__close" aria-label="Close notification">&times;</button>
+                    </div>
+
+                    <div class="edit-user-form">
+                        <form class="form" id="edit-user-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="edit-username" class="form-label">Username</label>
+                                    <input type="text" id="edit-username" class="form-input" value="john_doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-email" class="form-label">Email</label>
+                                    <input type="email" id="edit-email" class="form-input" value="john@example.com" required>
+                                    <span class="form-error">Please enter a valid email</span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="edit-first-name" class="form-label">First Name</label>
+                                    <input type="text" id="edit-first-name" class="form-input" value="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-last-name" class="form-label">Last Name</label>
+                                    <input type="text" id="edit-last-name" class="form-input" value="Doe">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="edit-role" class="form-label">Role</label>
+                                    <select id="edit-role" class="form-select" required>
+                                        <option value="admin">Admin</option>
+                                        <option value="regular" selected>Regular</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-status" class="form-label">Status</label>
+                                    <select id="edit-status" class="form-select" required>
+                                        <option value="active" selected>Active</option>
+                                        <option value="inactive">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-divider">
+                                <span class="form-divider__text">Change Password (optional)</span>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="edit-password" class="form-label">New Password</label>
+                                    <input type="password" id="edit-password" class="form-input" placeholder="Enter new password">
+                                    <span class="form-hint">Leave blank to keep current password</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-confirm-password" class="form-label">Confirm New Password</label>
+                                    <input type="password" id="edit-confirm-password" class="form-input" placeholder="Confirm new password">
+                                    <span class="form-error">Passwords do not match</span>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn--secondary">Cancel</button>
+                                <button type="submit" class="btn btn--primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3 class="footer__title">ConcertHub</h3>
+                    <p class="footer__description">Your one-stop platform for booking concert and event tickets.</p>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="my-tickets.html">My Tickets</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Support</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Subscribe</h4>
+                    <p>Stay updated with the latest events</p>
+                    <form class="footer__form">
+                        <input type="email" placeholder="Your email" class="footer__input" required>
+                        <button type="submit" class="btn btn--small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2023 ConcertHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

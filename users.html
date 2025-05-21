@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Users Management - ConcertHub">
+    <title>Users - ConcertHub</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__text">ConcertHub</h1>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="events.html" class="nav__link">Events</a></li>
+                        <li class="nav__item"><a href="my-tickets.html" class="nav__link">My Tickets</a></li>
+                        <li class="nav__item"><a href="users.html" class="nav__link nav__link--active">Users</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link nav__link--btn">Logout</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <div class="container">
+                <div class="admin-header">
+                    <h2 class="admin-title">Users Management</h2>
+                    <button class="btn btn--primary" id="create-user-btn">Create User</button>
+                </div>
+
+                <div class="admin-content">
+                    <div class="admin-filters">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search users..." class="search-input">
+                            <button class="search-btn">Search</button>
+                        </div>
+                        <div class="filter-group">
+                            <label for="role-filter" class="filter-label">Role:</label>
+                            <select id="role-filter" class="filter-select">
+                                <option value="all">All</option>
+                                <option value="admin">Admin</option>
+                                <option value="regular">Regular</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>admin</td>
+                                    <td>admin@concerthub.com</td>
+                                    <td><span class="badge badge--admin">Admin</span></td>
+                                    <td><span class="badge badge--active">Active</span></td>
+                                    <td class="actions-cell">
+                                        <a href="user-details.html" class="btn btn--icon" title="View"><span class="icon icon-eye"></span></a>
+                                        <a href="edit-user.html" class="btn btn--icon" title="Edit"><span class="icon icon-edit"></span></a>
+                                        <button class="btn btn--icon btn--danger" title="Delete"><span class="icon icon-trash"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>john_doe</td>
+                                    <td>john@example.com</td>
+                                    <td><span class="badge badge--regular">Regular</span></td>
+                                    <td><span class="badge badge--active">Active</span></td>
+                                    <td class="actions-cell">
+                                        <a href="user-details.html" class="btn btn--icon" title="View"><span class="icon icon-eye"></span></a>
+                                        <a href="edit-user.html" class="btn btn--icon" title="Edit"><span class="icon icon-edit"></span></a>
+                                        <button class="btn btn--icon btn--danger" title="Delete"><span class="icon icon-trash"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>jane_smith</td>
+                                    <td>jane@example.com</td>
+                                    <td><span class="badge badge--regular">Regular</span></td>
+                                    <td><span class="badge badge--inactive">Inactive</span></td>
+                                    <td class="actions-cell">
+                                        <a href="user-details.html" class="btn btn--icon" title="View"><span class="icon icon-eye"></span></a>
+                                        <a href="edit-user.html" class="btn btn--icon" title="Edit"><span class="icon icon-edit"></span></a>
+                                        <button class="btn btn--icon btn--danger" title="Delete"><span class="icon icon-trash"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>manager1</td>
+                                    <td>manager@concerthub.com</td>
+                                    <td><span class="badge badge--admin">Admin</span></td>
+                                    <td><span class="badge badge--active">Active</span></td>
+                                    <td class="actions-cell">
+                                        <a href="user-details.html" class="btn btn--icon" title="View"><span class="icon icon-eye"></span></a>
+                                        <a href="edit-user.html" class="btn btn--icon" title="Edit"><span class="icon icon-edit"></span></a>
+                                        <button class="btn btn--icon btn--danger" title="Delete"><span class="icon icon-trash"></span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination__btn pagination__btn--prev" disabled>Previous</button>
+                        <div class="pagination__numbers">
+                            <a href="#" class="pagination__number pagination__number--active">1</a>
+                            <a href="#" class="pagination__number">2</a>
+                            <a href="#" class="pagination__number">3</a>
+                        </div>
+                        <button class="pagination__btn pagination__btn--next">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Create User Modal -->
+        <div class="modal" id="create-user-modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h3 class="modal__title">Create New User</h3>
+                    <button class="modal__close" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal__body">
+                    <form class="form" id="create-user-form">
+                        <div class="form-group">
+                            <label for="new-username" class="form-label">Username</label>
+                            <input type="text" id="new-username" class="form-input" placeholder="Enter username" required>
+                            <span class="form-error">Username is required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-email" class="form-label">Email</label>
+                            <input type="email" id="new-email" class="form-input" placeholder="Enter email" required>
+                            <span class="form-error">Please enter a valid email</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password" class="form-label">Password</label>
+                            <input type="password" id="new-password" class="form-input" placeholder="Enter password" required>
+                            <span class="form-error">Password must be at least 8 characters</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" id="confirm-password" class="form-input" placeholder="Confirm password" required>
+                            <span class="form-error">Passwords do not match</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-role" class="form-label">Role</label>
+                            <select id="new-role" class="form-select" required>
+                                <option value="">Select role</option>
+                                <option value="admin">Admin</option>
+                                <option value="regular">Regular</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                            <input type="checkbox" id="active-status" class="form-checkbox" checked>
+                            <label for="active-status" class="form-checkbox-label">Active</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__footer">
+                    <button class="btn btn--secondary" id="cancel-create">Cancel</button>
+                    <button class="btn btn--primary" id="confirm-create">Create User</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete User Confirmation Modal -->
+        <div class="modal" id="delete-user-modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h3 class="modal__title">Delete User</h3>
+                    <button class="modal__close" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal__body">
+                    <p>Are you sure you want to delete this user? This action cannot be undone.</p>
+                </div>
+                <div class="modal__footer">
+                    <button class="btn btn--secondary" id="cancel-delete">Cancel</button>
+                    <button class="btn btn--danger" id="confirm-delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3 class="footer__title">ConcertHub</h3>
+                    <p class="footer__description">Your one-stop platform for booking concert and event tickets.</p>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="my-tickets.html">My Tickets</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Support</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__subtitle">Subscribe</h4>
+                    <p>Stay updated with the latest events</p>
+                    <form class="footer__form">
+                        <input type="email" placeholder="Your email" class="footer__input" required>
+                        <button type="submit" class="btn btn--small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2023 ConcertHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
