@@ -2418,4 +2418,54 @@ template {
   color: #666;
 }
 
+.concerts {
+  padding: 32px 0;
+}
+.concerts h1 {
+  margin-bottom: 16px;
+  color: #2a5dff;
+}
+.concerts .api-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .concerts .api-controls {
+    flex-direction: column;
+  }
+}
+.concerts .api-controls .btn {
+  margin-right: 8px;
+}
+@media (max-width: 600px) {
+  .concerts .api-controls .btn {
+    margin-bottom: 8px;
+  }
+}
+.concerts .loading-indicator {
+  margin: 16px 0;
+  font-style: italic;
+  color: #888888;
+}
+.concerts .api-response {
+  margin-top: 16px;
+}
+.concerts .api-response h2 {
+  margin-bottom: 8px;
+  color: #ff5d2a;
+}
+.concerts .json-display {
+  background-color: #f5f7fa;
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #e0e0e0;
+}
+
 /*# sourceMappingURL=main.css.map */
