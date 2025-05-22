@@ -1,0 +1,77 @@
+// Spacing
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 32px;
+
+// Colors
+$color-primary: #2a5dff;         // Main accent color
+$color-secondary: #ff5d2a;       // Secondary accent color
+$color-text-secondary: #888888;  // Muted text
+$color-bg-secondary: #f5f7fa;    // Light background for code blocks
+$color-border: #e0e0e0;          // Border color
+
+// Border radius
+$border-radius: 6px;
+
+// Example mobile mixin (if not already defined)
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+
+.concerts {
+    padding: $spacing-large 0;
+
+    h1 {
+        margin-bottom: $spacing-medium;
+        color: $color-primary;
+    }
+
+    .api-controls {
+        display: flex;
+        gap: $spacing-small;
+        margin-bottom: $spacing-medium;
+        flex-wrap: wrap;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .btn {
+            margin-right: $spacing-small;
+            
+            @include mobile {
+                margin-bottom: $spacing-small;
+            }
+        }
+    }
+
+    .loading-indicator {
+        margin: $spacing-medium 0;
+        font-style: italic;
+        color: $color-text-secondary;
+    }
+
+    .api-response {
+        margin-top: $spacing-medium;
+        
+        h2 {
+            margin-bottom: $spacing-small;
+            color: $color-secondary;
+        }
+    }
+
+    .json-display {
+        background-color: $color-bg-secondary;
+        padding: $spacing-medium;
+        border-radius: $border-radius;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        font-family: monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        border: 1px solid $color-border;
+    }
+}
