@@ -20,7 +20,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Trash2, Edit, Plus, LogOut, Users, Ticket, Calendar } from "lucide-react"
+import { Trash2, Edit, Plus, LogOut, Users, Ticket, Calendar, MessageCircle } from "lucide-react"
+import Chat from "@/components/Chat"
 
 interface User {
   id: number
@@ -502,7 +503,7 @@ export default function UserManagementApp() {
           )}
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-3">
+            <TabsList className="grid w-full grid-cols-4">
               <TabsTrigger value="users">
                 <Users className="h-4 w-4 mr-2" />
                 Користувачі
@@ -514,6 +515,10 @@ export default function UserManagementApp() {
               <TabsTrigger value="bookings">
                 <Ticket className="h-4 w-4 mr-2" />
                 Мої бронювання
+              </TabsTrigger>
+              <TabsTrigger value="chat">
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Чат
               </TabsTrigger>
             </TabsList>
 
@@ -681,6 +686,18 @@ export default function UserManagementApp() {
                   ))}
                 </div>
               )}
+            </TabsContent>
+
+            <TabsContent value="chat" className="space-y-4">
+              <div className="flex justify-between items-center">
+                <h2 className="text-2xl font-bold text-gray-900">Чат</h2>
+              </div>
+
+              <Card>
+                <CardContent className="p-6">
+                  <Chat currentUser={currentUser} />
+                </CardContent>
+              </Card>
             </TabsContent>
           </Tabs>
         </div>
